@@ -24,9 +24,9 @@ public class Main {
 			j = Integer.parseInt(st.nextToken());
 			answer = sumArr[j] - sumArr[i - 1];
 			bw.write(Integer.toString(answer));
-			bw.flush();
 			bw.newLine();
 		}
+		bw.flush();
 		br.close();
 		bw.close();
 	}
