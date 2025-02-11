@@ -13,14 +13,8 @@ public class Main {
 
 		String A = st.nextToken();
 		String B = st.nextToken();
-		String revA = "";
-		String revB = "";
-		for (int i = 2; i >= 0; i--) {
-			revA = revA + A.charAt(i);
-		}
-		for (int i = 2; i >= 0; i--) {
-			revB = revB + B.charAt(i);
-		}
+		String revA = new StringBuilder(A).reverse().toString();
+		String revB = new StringBuilder(B).reverse().toString();
 		if(Integer.parseInt(revA) > Integer.parseInt(revB)) {
 			bw.write(revA + "\n");
 		}
