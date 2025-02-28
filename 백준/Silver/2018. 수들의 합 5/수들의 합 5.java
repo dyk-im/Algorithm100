@@ -9,8 +9,8 @@ public class Main {
 		int N = Integer.parseInt(br.readLine());
 		int sum = 1;
 		int count = 1;
-        int start = 1;
-        int end = 1;
+        	int start = 1;
+        	int end = 1;
 
         while(start < N){
             
