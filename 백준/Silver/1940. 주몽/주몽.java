@@ -15,6 +15,7 @@ public class Main {
 			arr[i] = Integer.parseInt(st.nextToken());
 		}
 		Arrays.sort(arr);
+		
 		int start = 0;
 		int end = N-1;
 		int sum = 0;
@@ -33,6 +34,7 @@ public class Main {
 				end--;
 			}
 		}
+		
 		bw.write(count+"\n");
 		bw.flush();
 		bw.close();
