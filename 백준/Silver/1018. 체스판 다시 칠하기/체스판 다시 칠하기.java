@@ -19,13 +19,17 @@ public class Main {
 		}
 
 		for(int i = 0; i < 8; i++) {
-			if(i % 2 == 0) Wboard[i] = "WBWBWBWB";
-			else Wboard[i] = "BWBWBWBW";
+			if(i % 2 == 0) 
+				Wboard[i] = "WBWBWBWB";
+			else 
+				Wboard[i] = "BWBWBWBW";
 		}
 
 		for(int i = 0; i < 8; i++) {
-			if(i % 2 == 0) Bboard[i] = "BWBWBWBW";
-			else Bboard[i] = "WBWBWBWB";
+			if(i % 2 == 0) 
+				Bboard[i] = "BWBWBWBW";
+			else 
+				Bboard[i] = "WBWBWBWB";
 		}
 		
 		int min = 64;
