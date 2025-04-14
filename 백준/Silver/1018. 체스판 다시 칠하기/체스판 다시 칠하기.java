@@ -27,6 +27,7 @@ public class Main {
 			if(i % 2 == 0) Bboard[i] = "BWBWBWBW";
 			else Bboard[i] = "WBWBWBWB";
 		}
+		
 		int min = 64;
 	
 		for(int i = 0; i < (N - 7); i++) {
