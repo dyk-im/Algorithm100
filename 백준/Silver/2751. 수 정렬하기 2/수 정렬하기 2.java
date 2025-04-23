@@ -8,7 +8,7 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb = new StringBuilder();
         
-		boolean[] arr = new boolean[2000001];	
+		boolean[] arr = new boolean[2000001];	//
         
 		int N = Integer.parseInt(br.readLine());
         
