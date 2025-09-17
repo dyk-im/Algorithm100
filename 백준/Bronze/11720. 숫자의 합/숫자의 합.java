@@ -3,18 +3,16 @@ import java.io.*;
 public class Main {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		int total = 0;
-		int N = Integer.parseInt(br.readLine());
-		String num = br.readLine();
 
-		for (int idx = 0; idx < N; idx++) {
-			int now = (int)(num.charAt(idx)-'0');
-			total += now;
+		int N = Integer.parseInt(br.readLine());
+		String digit = br.readLine();
+		int total = 0;
+
+		for(int i = 0; i<digit.length(); i++) {
+			total += digit.charAt(i)-'0';
 		}
-		bw.write(String.valueOf(total));
-		bw.flush();
+		System.out.println(total);
+
 		br.close();
-		bw.close();
 	}
 }
