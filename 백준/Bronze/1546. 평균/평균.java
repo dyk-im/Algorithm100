@@ -4,29 +4,32 @@ import java.io.*;
 public class Main {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		StringTokenizer st;
 
+
 		int N = Integer.parseInt(br.readLine());
-		int[] score = new int[N];
-		double[] newScore = new double[N];
-		int max= 0; double total = 0;
-		
 		st = new StringTokenizer(br.readLine());
 
-		for (int idx = 0; idx < N; idx++) {
-			score[idx] = Integer.parseInt(st.nextToken());
-			max = Math.max(max, score[idx]);
-		}
-		for(int idx = 0; idx < N; idx++) {
-			newScore[idx] = ((double)score[idx])/max * 100;
-			total += newScore[idx];
-		}
-		double avg = total / N;
+		double[] scoreList = new double[N];
+		double M = 0;
+		double total = 0;
 
-		bw.write(Double.toString(avg));
-		bw.flush();
+		for(int i=0; i<N ; i++) {
+			scoreList[i] = Integer.parseInt(st.nextToken());
+		}
+		M = scoreList[0];
+		for(int i=1; i<N ; i++) {
+			if(scoreList[i] > M) {
+				M = scoreList[i];
+			}
+		}
+
+		for(int i=0; i<N ; i++) {
+			total += scoreList[i];
+		}
+
+		System.out.println(total*100/M/N);
+
 		br.close();
-		bw.close();
 	}
 }
